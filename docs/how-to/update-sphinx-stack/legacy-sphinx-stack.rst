@@ -17,7 +17,7 @@ maintenance concerns when managing your documentation.
 
 .. note::
 
-    If ``canonical-sphinx`` is included under ``extensions`` in your ``conf.py`` file,
+    If ``canonical_sphinx`` is included under ``extensions`` in your ``conf.py`` file,
     you are already using an extension-based Sphinx Stack. Follow the guide on
     :ref:`updating the new Sphinx Stack <update-new-sphinx-stack>`.
 

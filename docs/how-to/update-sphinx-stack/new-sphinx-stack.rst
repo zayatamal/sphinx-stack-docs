@@ -20,7 +20,7 @@ to take extra steps when updating.
 
 .. note::
 
-    If ``canonical-sphinx`` is not included under ``extensions`` in your ``conf.py``
+    If ``canonical_sphinx`` is not included under ``extensions`` in your ``conf.py``
     file, your project is not on an extension-based Sphinx Stack. Follow the guide on
     :ref:`updating a legacy Sphinx Stack project <update-legacy-sphinx-stack>`.
 

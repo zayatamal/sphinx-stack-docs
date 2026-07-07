@@ -25,7 +25,7 @@ There are two versions of the Sphinx Stack that entail different update processe
 New Sphinx Stack
 ^^^^^^^^^^^^^^^^
 
-If your ``conf.py`` file includes ``canonical-sphinx`` under the ``extensions`` list,
+If your ``conf.py`` file includes ``canonical_sphinx`` under the ``extensions`` list,
 you are using the new Sphinx Stack. 
 
 To update a new Sphinx Stack project to the latest version, see:
@@ -41,7 +41,7 @@ To update a new Sphinx Stack project to the latest version, see:
 Legacy Sphinx Stack
 ^^^^^^^^^^^^^^^^^^^^
 
-If your ``conf.py`` file does _not_ include ``canonical-sphinx`` you are using the
+If your ``conf.py`` file does _not_ include ``canonical_sphinx`` you are using the
 legacy Sphinx Stack. 
 
 To update a legacy Sphinx Stack project to the latest version of the new Sphinx Stack:
