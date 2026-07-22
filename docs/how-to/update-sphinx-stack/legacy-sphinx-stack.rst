@@ -3,7 +3,7 @@
 
 .. _update-legacy-sphinx-stack:
 
-Update the legacy Sphinx Stack 
+Update the legacy Sphinx Stack
 ==============================
 
 This guide outlines the steps required to migrate a documentation project from the
@@ -65,7 +65,7 @@ Set up a new project
    - ``.github/workflows/*``
 #. Ensure the following files are moved to their original paths in the project. These
    files are defaulted to the repository root, but may have be changed upon project
-   needs: 
+   needs:
 
    - ``.gitignore``
    - ``.readthedocs.yml``
@@ -98,7 +98,7 @@ files, summarised in the following table:
     :header-rows: 1
 
     * - Configuration file
-      - Pre-extension 
+      - Pre-extension
       - Extension-based
     * - ``conf.py``
       - Common configurations shared by all Sphinx Stack projects
@@ -114,15 +114,16 @@ defaults are set for general configuration by inclusion of the ``canonical-sphin
 extension.
 
 Ensure that all the previous changes in the original ``custom_conf.py`` file are copied
-to the new ``conf.py`` file.  
+to the new ``conf.py`` file.
 
 
 Dependencies
 ~~~~~~~~~~~~
 
-If your project requires additional extensions beyond the default list, add the
-extension list to the new project in ``docs/requirements.txt``.
+The Sphinx Stack supports a reasonable set of default extensions. If your project requires additional extensions, add them to the project's ``docs/requirements.txt`` file.
 
+It's your responsibility to ensure that extensions you add to this list are compatible with
+the rest of the Sphinx Stack.
 
 Documentation source files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -130,8 +131,8 @@ Documentation source files
 #. Copy all documentation source files from your original project to the new project,
    keeping their original structure. These file may include but are not limited to:
 
-   - ``.md`` 
-   - ``.rst`` 
+   - ``.md``
+   - ``.rst``
    - ``.txt``
    - ``.json``
    - images
@@ -158,7 +159,7 @@ These resources are bundled with the extension and are no longer provided as sou
 files in the new Sphinx Stack.
 
 If you have customised any of these resources in the original project, you need to
-manually migrate these changes to the new project. 
+manually migrate these changes to the new project.
 
 For example, if you added customised styling in the original
 ``.sphinx/_static/custom.css`` file, follow the steps:
@@ -235,9 +236,9 @@ following list illustrates the changes in the directory structure after the migr
     │   ├── pa11y-ci.json           # renamed to `pa11y.json`
     │   └── spellingcheck.yaml
     ├── metrics                     # removed
-    │   └── scripts                 
-    │       ├── build_metrics.sh   
-    │       └── source_metrics.sh   
+    │   └── scripts
+    │       ├── build_metrics.sh
+    │       └── source_metrics.sh
     ├── reuse                       # removed
     │   └── links.txt
     ├── .custom_wordlist.txt        # moved to `docs/.custom_wordlist.txt`

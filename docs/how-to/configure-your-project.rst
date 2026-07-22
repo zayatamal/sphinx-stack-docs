@@ -138,11 +138,18 @@ the selection in the  ``docs/conf.py`` file.
 The canonical-sphinx extension is required for the Sphinx Stack and provides the
 Furo-based theme and custom templates.
 
-To add new extensions needed for your documentation set, add them to the ``extensions`` parameter in ``docs/conf.py``.
+To add an extension to your documentation set, add its Python package to the
+``docs/requirements.txt`` file and add the module to the ``extensions`` list in the
+``docs/conf.py`` file.
 
-.. note::
+.. admonition:: Extension support
+    :class: note
 
-   If any additional extensions need specific Python packages, ensure they are installed alongside the other requirements by adding them to the ``docs/requirements.txt`` file.
+    The only extensions formally supported by the Sphinx Stack are those included in its
+    `default requirements.txt file
+    <https://github.com/canonical/sphinx-stack/blob/main/docs/requirements.txt>`__. If
+    you add any extensions to this list, it's your responsibility to ensure that they're
+    compatible with the rest of the Sphinx Stack.
 
 
 Add page-specific configuration
