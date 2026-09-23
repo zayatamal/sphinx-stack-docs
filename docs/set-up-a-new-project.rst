@@ -1,3 +1,6 @@
+.. meta::
+   :description: How to add the Sphinx Stack to a new or existing project, build the documentation locally, and set up automatic documentation checks.
+
 .. _set-up-a-new-project:
 
 
@@ -68,8 +71,8 @@ Review the template files
 
 Before committing your setup, review the files you copied or received from the template:
 
-- If you created a repository from the template, remove ``CONTRIBUTING.md`` and
-  ``.github/CODEOWNERS`` that can't be reused.
+- If you created a repository from the template, remove the files that can't be reused,
+  such as ``CONTRIBUTING.md`` and ``.github/CODEOWNERS``.
 - Remove ``.github/workflows/test-sphinx-stack.yml``. This workflow tests the Sphinx
   Stack itself and can't be reused by your project.
 - Review the remaining workflows in ``.github/workflows/``, remove any that duplicate
@@ -184,15 +187,15 @@ links, and inclusive language. Review the workflows' triggers and paths for your
 repository.
 
 If you move the documentation from ``docs/``, update the relevant paths and working
-directories. See :ref:`github-workflows` for the available workflows and
-:ref:`run-documentation-checks` to run checks locally.
+directories. See :ref:`github-workflows` for the available workflows, or
+:ref:`run the checks locally <run-documentation-checks>`.
 
 
 Configure pre-commit hooks (optional)
 -------------------------------------
 
-`pre-commit <https://pre-commit.com/>`__ hooks are optional. They run documentation
-checks when you create a commit, so you can catch issues before opening a pull request.
+Optional `pre-commit <https://pre-commit.com/>`__ hooks run documentation checks when
+you create a commit, so you can catch issues before opening a pull request.
 
 The Sphinx Stack includes a ready-to-use ``.pre-commit-config.yaml`` file under
 ``docs/_dev/``:
@@ -228,8 +231,8 @@ Before publishing the documentation:
 
 - Replace the template pages with content for your project.
 - Review the remaining settings in :ref:`configure-your-project`.
-- Run :ref:`run-documentation-checks` and confirm that the GitHub workflows you kept
-  behave as expected.
+- Run the :ref:`documentation checks <run-documentation-checks>` and confirm that the
+  GitHub workflows you kept behave as expected.
 - Follow :ref:`publish-on-rtd`.
 
 After the initial setup, you can:
