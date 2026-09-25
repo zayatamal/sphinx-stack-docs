@@ -33,16 +33,11 @@ Choose the setup that matches your project.
 Create a new repository from the template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Go to the `Sphinx Stack repository <https://github.com/canonical/sphinx-stack>`__,
-   select **Use this template** > **Create a new repository**, then fill in the
-   form.
-2. Choose an owner. If you're creating documentation for a Canonical project, set the
-   repository owner to **canonical**.
-3. Enter a repository name, choose its visibility, add a description if needed, and
-   create the repository.
-
-The new repository includes the documentation source, build configuration, GitHub
-workflows, and Read the Docs configuration.
+Go to the `Sphinx Stack repository <https://github.com/canonical/sphinx-stack>`__ and
+select **Use this template** > **Create a new repository**, then fill in the form. Choose
+an owner; if you're creating documentation for a Canonical project, set the repository
+owner to **canonical**. Enter a repository name, choose its visibility, add a description
+if needed, and create the repository.
 
 
 Add the Sphinx Stack to an existing repository
@@ -65,24 +60,25 @@ documentation workflow files to it rather than replacing the existing directory.
 Review the template files
 -------------------------
 
-Before committing your setup, review the files you copied or received from the template:
+Before committing your setup, review the files you copied or received from the template.
 
-- If you created a repository from the template, remove the files that can't be reused,
-  such as ``CONTRIBUTING.md`` and ``.github/CODEOWNERS``.
-- Remove ``.github/workflows/test-sphinx-stack.yml``. This workflow tests the Sphinx
-  Stack itself and can't be reused by your project.
-- Review the remaining workflows in ``.github/workflows/``, remove any that duplicate
-  checks your project already runs, and keep the ones you need. In particular:
+If you created a repository from the template, remove the files that can't be reused,
+such as ``CONTRIBUTING.md`` and ``.github/CODEOWNERS``. Also remove
+``.github/workflows/test-sphinx-stack.yml``, which tests the Sphinx Stack itself and
+can't be reused by your project.
 
-  - ``cla-check.yml`` verifies whether contributors have signed the `Canonical License
-    Agreement <https://canonical.com/legal/contributors>`__. All Canonical projects
-    require this check, so if you're adding docs to an existing Canonical project that
-    already has it, remove this workflow.
-  - ``sphinx-python-dependency-build-checks.yml`` verifies Python dependencies for the
-    documentation system. If your project has its own dependency checks, remove this
-    workflow.
-  - ``markdown-style-checks.yml`` runs the built-in Markdown linter. If your project
-    already validates its Markdown files, remove this workflow.
+Review the remaining workflows in ``.github/workflows/``, remove any that duplicate
+checks your project already runs, and keep the ones you need.
+
+``cla-check.yml`` verifies whether contributors have signed the `Canonical License
+Agreement <https://canonical.com/legal/contributors>`__. All Canonical projects require
+this check, so remove it only if your project already runs it.
+
+``sphinx-python-dependency-build-checks.yml`` verifies Python dependencies for the
+documentation system. Remove it if your project has its own dependency checks.
+
+``markdown-style-checks.yml`` runs the built-in Markdown linter. Remove it if your
+project already validates its Markdown files.
 
 
 Configure your project
