@@ -7,7 +7,7 @@
 Set up a new project
 ====================
 
-This guide shows you how to add the Sphinx Stack to a new or existing project. You'll
+This is a guide for adding Sphinx Stack to a new or existing project. You'll
 configure it, build the documentation locally, and set up automatic documentation
 checks.
 
@@ -15,13 +15,9 @@ checks.
 Before you start
 ----------------
 
-Decide where the documentation will live. For most projects, keep it in a ``docs``
-directory in the project repository. This lets contributors review documentation
-alongside related project changes. It is the default layout used by the Sphinx Stack.
+Decide where to store the documentation files in the project's code. Conventionally, projects keep them in a ``docs`` directory, which is why it's the default.
 
-Consider a dedicated documentation repository if the documentation covers multiple
-repositories, has a separate release process, or needs different ownership or access
-controls.
+You should also decide whether you need a standalone documentation repository. There are many cases where you would do this, such as non-software projects, software that spans multiple code repositories, or projects where documentation must be kept separate from the software.
 
 Both approaches use the same Sphinx Stack directory structure and build commands.
 
@@ -37,9 +33,9 @@ Choose the setup that matches your project.
 Create a new repository from the template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. In the `Sphinx Stack repository <https://github.com/canonical/sphinx-stack>`__,
-   select **Use this template** > **Create a new repository** and fill in the
-   `form <https://github.com/new?template_name=sphinx-stack&template_owner=canonical>`__.
+1. Go to the `Sphinx Stack repository <https://github.com/canonical/sphinx-stack>`__,
+   select **Use this template** > **Create a new repository**, then fill in the
+   form.
 2. Choose an owner. If you're creating documentation for a Canonical project, set the
    repository owner to **canonical**.
 3. Enter a repository name, choose its visibility, add a description if needed, and
