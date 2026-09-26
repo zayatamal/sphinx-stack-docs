@@ -15,9 +15,13 @@ checks.
 Before you start
 ----------------
 
-Decide where to store the documentation files in the project's code. Conventionally, projects keep them in a ``docs`` directory, which is why it's the default.
+Decide where your documentation will live. Consider a dedicated documentation repository
+if the documentation covers multiple repositories, has a separate release process, or
+needs different ownership or access controls.
 
-You should also decide whether you need a standalone documentation repository. There are many cases where you would do this, such as non-software projects, software that spans multiple code repositories, or projects where documentation must be kept separate from the software.
+Otherwise, keep the documentation in the same repository as the project. Conventionally,
+the files go in a ``docs`` directory, which is the default layout used by the Sphinx
+Stack. This lets contributors review documentation alongside related project changes.
 
 Both approaches use the same Sphinx Stack directory structure and build commands.
 
@@ -68,17 +72,15 @@ such as ``CONTRIBUTING.md`` and ``.github/CODEOWNERS``. Also remove
 can't be reused by your project.
 
 Review the remaining workflows in ``.github/workflows/``, remove any that duplicate
-checks your project already runs, and keep the ones you need.
+checks your project already runs, and keep the ones you need. In particular:
 
-``cla-check.yml`` verifies whether contributors have signed the `Canonical License
-Agreement <https://canonical.com/legal/contributors>`__. All Canonical projects require
-this check, so remove it only if your project already runs it.
-
-``sphinx-python-dependency-build-checks.yml`` verifies Python dependencies for the
-documentation system. Remove it if your project has its own dependency checks.
-
-``markdown-style-checks.yml`` runs the built-in Markdown linter. Remove it if your
-project already validates its Markdown files.
+- ``cla-check.yml`` verifies whether contributors have signed the `Canonical License
+  Agreement <https://canonical.com/legal/contributors>`__. All Canonical projects
+  require this check, so remove it only if your project already runs it.
+- ``sphinx-python-dependency-build-checks.yml`` verifies Python dependencies for the
+  documentation system. Remove it if your project has its own dependency checks.
+- ``markdown-style-checks.yml`` runs the built-in Markdown linter. Remove it if your
+  project already validates its Markdown files.
 
 
 Configure your project
